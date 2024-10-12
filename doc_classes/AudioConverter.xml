@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="AudioConverter" inherits="Object" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Singleton for converting various audio formats to wav (PCM).
+	</brief_description>
+	<description>
+		AudioConverter contains static methods that convert various [AudioStream] derived classes to [AudioStreamWAV] by decoding the audio data to raw PCM.
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="convert_mp3" qualifiers="static">
+			<return type="AudioStreamWAV" />
+			<param index="0" name="mp3" type="AudioStreamMP3" />
+			<description>
+				Converts an [param mp3] to raw PCM audio. Returns null if an error occurs.
+			</description>
+		</method>
+		<method name="convert_vorbis" qualifiers="static">
+			<return type="AudioStreamWAV" />
+			<param index="0" name="vorbis" type="AudioStreamOggVorbis" />
+			<description>
+				Converts an ogg [param vorbis] file to raw PCM audio. Returns null if an error occurs.
+			</description>
+		</method>
+	</methods>
+</class>
